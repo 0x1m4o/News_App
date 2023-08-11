@@ -3,9 +3,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:news_app/core/resources/data_state.dart';
-import 'package:news_app/features/news/data/repository-impl/article_repository_impl.dart';
 import 'package:news_app/features/news/domain/entities/article.dart';
-import 'package:dartz/dartz.dart';
 import 'package:news_app/features/news/domain/usecases/get_article.dart';
 
 part 'remote_article_bloc.freezed.dart';

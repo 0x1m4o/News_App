@@ -47,7 +47,7 @@ dependencies:
   # Flutter Dotenv [https://pub.dev/packages/flutter_dotenv]
   flutter_dotenv: ^5.1.0
 
-  # Freezed
+  # Freezed [https://pub.dev/packages/freezed]
   freezed: ^2.4.1
 
 dev_dependencies:
@@ -63,6 +63,9 @@ dev_dependencies:
 
   # Retrofit Generator [https://pub.dev/packages/retrofit_generator]
   retrofit_generator: ^7.0.8
+
+  # Freezed Anotation [https://pub.dev/packages/freezed_annotation]
+  freezed_annotation: ^2.4.1
 
 flutter:
   uses-material-design: true
