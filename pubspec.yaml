@@ -41,6 +41,9 @@ dependencies:
   # Retrofit [https://pub.dev/packages/retrofit]
   retrofit: ^4.0.1
 
+  # Dartz
+  dartz: ^0.10.1
+
 dev_dependencies:
   flutter_lints: ^2.0.0
   flutter_test:
