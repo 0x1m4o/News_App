@@ -41,7 +41,7 @@ dependencies:
   # Retrofit [https://pub.dev/packages/retrofit]
   retrofit: ^4.0.1
 
-  # Dartz
+  # Dartz [https://pub.dev/packages/dartz]
   dartz: ^0.10.1
 
 dev_dependencies:
