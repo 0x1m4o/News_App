@@ -9,7 +9,8 @@ class GetArticleUseCase
 
   GetArticleUseCase(this._articleRepository);
   @override
-  Future<DataState<List<ArticleEntity>>> call({void params}) {
-    return _articleRepository.getAllNews();
+  Future<DataState<List<ArticleEntity>>> call(
+      {void params, String? country, String? category}) {
+    return _articleRepository.getAllNews(country: country, category: category);
   }
 }
