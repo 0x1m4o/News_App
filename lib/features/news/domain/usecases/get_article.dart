@@ -5,12 +5,12 @@ import 'package:news_app/features/news/domain/repository/article_repository.dart
 
 class GetArticleUseCase
     implements Usecase<DataState<List<ArticleEntity>>, void> {
-  final ArticleRepository _articleRepository;
+  final ArticleRepository articleRepository;
 
-  GetArticleUseCase(this._articleRepository);
+  GetArticleUseCase({required this.articleRepository});
   @override
   Future<DataState<List<ArticleEntity>>> call(
       {void params, String? country, String? category}) {
-    return _articleRepository.getAllNews(country: country, category: category);
+    return articleRepository.getAllNews(country: country, category: category);
   }
 }

@@ -6,7 +6,9 @@ import 'package:retrofit/retrofit.dart';
 import 'package:dio/dio.dart';
 part 'news_api_service.g.dart';
 
-@RestApi(baseUrl: newsAPIBaseURL)
+@RestApi(
+  baseUrl: newsAPIBaseURL,
+)
 abstract class NewsApiService {
   factory NewsApiService(Dio dio) = _NewsApiService;
 
