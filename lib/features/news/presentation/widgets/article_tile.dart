@@ -104,6 +104,19 @@ class ArticleWidget extends StatelessWidget {
                 color: Colors.black87,
               ),
             ),
+            SizedBox(
+              height: 10,
+            ),
+            Text(
+              article!.author ?? 'Unknown',
+              maxLines: 3,
+              overflow: TextOverflow.ellipsis,
+              style: const TextStyle(
+                fontFamily: 'Butler',
+                fontSize: 18,
+                color: Colors.black87,
+              ),
+            ),
 
             // Description
             Expanded(

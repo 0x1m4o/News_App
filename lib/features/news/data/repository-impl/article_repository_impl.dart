@@ -1,17 +1,23 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first, depend_on_referenced_packages
 import 'dart:io';
 
+import 'package:dio/dio.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+
 import 'package:news_app/core/resources/data_state.dart';
+import 'package:news_app/features/news/data/data_sources/local/app_database.dart';
 import 'package:news_app/features/news/data/data_sources/remote/news_api_service.dart';
 import 'package:news_app/features/news/data/models/article_model.dart';
-import 'package:dio/dio.dart';
+import 'package:news_app/features/news/domain/entities/article.dart';
 import 'package:news_app/features/news/domain/repository/article_repository.dart';
 
 class ArticleRepositoryImpl implements ArticleRepository {
   final NewsApiService newsApiService;
+  final AppDatabase appDatabase;
+
   ArticleRepositoryImpl({
     required this.newsApiService,
+    required this.appDatabase,
   });
   @override
   Future<DataState<List<ArticleModel>>> getAllNews(
@@ -36,5 +42,22 @@ class ArticleRepositoryImpl implements ArticleRepository {
     } on DioException catch (e) {
       return DataFailed(e);
     }
+  }
+
+  @override
+  Future<List<ArticleEntity>> getSavedArticle() {
+    return appDatabase.articleDao.getArticle();
+  }
+
+  @override
+  Future<void> removeArticle(ArticleEntity article) {
+    return appDatabase.articleDao
+        .deleteArticle(ArticleModel.fromEntity(article));
+  }
+
+  @override
+  Future<void> saveArticle(ArticleEntity article) {
+    return appDatabase.articleDao
+        .insertArticle(ArticleModel.fromEntity(article));
   }
 }

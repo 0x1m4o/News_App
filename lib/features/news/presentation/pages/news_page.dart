@@ -11,7 +11,7 @@ class NewsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider<RemoteArticleBloc>(
       create: (context) => sl()
-        ..add(const RemoteArticleFetched(category: 'general', country: 'us')),
+        ..add(const RemoteArticleFetched(category: 'general', country: 'id')),
       child: Scaffold(
         body: BlocConsumer<RemoteArticleBloc, RemoteArticleState>(
           listener: (context, state) {},
