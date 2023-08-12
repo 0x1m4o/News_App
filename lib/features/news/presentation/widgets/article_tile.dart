@@ -61,10 +61,10 @@ class ArticleWidget extends StatelessWidget {
                 child: Container(
                   width: MediaQuery.of(context).size.width / 3,
                   height: double.maxFinite,
+                  child: CupertinoActivityIndicator(),
                   decoration: BoxDecoration(
                     color: Colors.black.withOpacity(0.08),
                   ),
-                  child: const CupertinoActivityIndicator(),
                 ),
               ),
             ),
@@ -75,10 +75,10 @@ class ArticleWidget extends StatelessWidget {
                 child: Container(
                   width: MediaQuery.of(context).size.width / 3,
                   height: double.maxFinite,
+                  child: Icon(Icons.error),
                   decoration: BoxDecoration(
                     color: Colors.black.withOpacity(0.08),
                   ),
-                  child: const Icon(Icons.error),
                 ),
               ),
             ));
@@ -100,19 +100,6 @@ class ArticleWidget extends StatelessWidget {
               style: const TextStyle(
                 fontFamily: 'Butler',
                 fontWeight: FontWeight.w900,
-                fontSize: 18,
-                color: Colors.black87,
-              ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Text(
-              article!.author ?? 'Unknown',
-              maxLines: 3,
-              overflow: TextOverflow.ellipsis,
-              style: const TextStyle(
-                fontFamily: 'Butler',
                 fontSize: 18,
                 color: Colors.black87,
               ),
