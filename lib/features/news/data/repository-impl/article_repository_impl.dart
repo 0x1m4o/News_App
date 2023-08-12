@@ -21,7 +21,11 @@ class ArticleRepositoryImpl implements ArticleRepository {
           apiKey: dotenv.env['apiKey'], country: country, category: category);
 
       if (httpResponse.response.statusCode == HttpStatus.ok) {
-        return DataSuccess(httpResponse.data);
+        List<ArticleModel> articles =
+            (httpResponse.data['articles'] as List<dynamic>)
+                .map((data) => ArticleModel.fromJson(data))
+                .toList();
+        return DataSuccess(articles);
       } else {
         return DataFailed(DioException(
             requestOptions: httpResponse.response.requestOptions,

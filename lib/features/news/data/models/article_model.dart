@@ -1,8 +1,6 @@
 import 'package:news_app/core/constants/constants.dart';
 import 'package:news_app/features/news/domain/entities/article.dart';
-import 'package:floor/floor.dart';
 
-@Entity(tableName: 'article', primaryKeys: ['id'])
 class ArticleModel extends ArticleEntity {
   const ArticleModel({
     Source? source,
@@ -11,7 +9,7 @@ class ArticleModel extends ArticleEntity {
     String? description,
     String? url,
     String? urlToImage,
-    DateTime? publishedAt,
+    String? publishedAt,
     String? content,
   }) : super(
           source: source,
@@ -26,7 +24,6 @@ class ArticleModel extends ArticleEntity {
 
   factory ArticleModel.fromJson(Map<String, dynamic> map) {
     return ArticleModel(
-      source: map['source'] ?? {},
       author: map['author'] ?? "",
       title: map['title'] ?? "",
       description: map['description'] ?? "",

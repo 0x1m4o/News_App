@@ -21,15 +21,14 @@ class RemoteArticleBloc extends Bloc<RemoteArticleEvent, RemoteArticleState> {
   void _onArticleFetched(RemoteArticleFetched articleFetchedEvent,
       Emitter<RemoteArticleState> emit) async {
     emit(const RemoteArticleState.loading());
-
-    var response = await articleUseCase(
+    final response = await articleUseCase(
         country: articleFetchedEvent.country,
         category: articleFetchedEvent.category);
 
     if (response is DataSuccess && response.data!.isNotEmpty) {
       emit(RemoteArticleState.loadSuccess(response.data!));
     } else {
-      emit(RemoteArticleState.failure(response.error!.message!));
+      emit(RemoteArticleState.failure(response.error!.message));
     }
   }
 }

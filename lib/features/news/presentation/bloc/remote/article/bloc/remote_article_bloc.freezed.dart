@@ -244,24 +244,24 @@ mixin _$RemoteArticleState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(String message) failure,
-    required TResult Function(List<ArticleEntity> articles) loadSuccess,
+    required TResult Function(String? message) failure,
+    required TResult Function(List<ArticleEntity>? articles) loadSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(String message)? failure,
-    TResult? Function(List<ArticleEntity> articles)? loadSuccess,
+    TResult? Function(String? message)? failure,
+    TResult? Function(List<ArticleEntity>? articles)? loadSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(String message)? failure,
-    TResult Function(List<ArticleEntity> articles)? loadSuccess,
+    TResult Function(String? message)? failure,
+    TResult Function(List<ArticleEntity>? articles)? loadSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -349,8 +349,8 @@ class _$_Initial implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(String message) failure,
-    required TResult Function(List<ArticleEntity> articles) loadSuccess,
+    required TResult Function(String? message) failure,
+    required TResult Function(List<ArticleEntity>? articles) loadSuccess,
   }) {
     return initial();
   }
@@ -360,8 +360,8 @@ class _$_Initial implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(String message)? failure,
-    TResult? Function(List<ArticleEntity> articles)? loadSuccess,
+    TResult? Function(String? message)? failure,
+    TResult? Function(List<ArticleEntity>? articles)? loadSuccess,
   }) {
     return initial?.call();
   }
@@ -371,8 +371,8 @@ class _$_Initial implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(String message)? failure,
-    TResult Function(List<ArticleEntity> articles)? loadSuccess,
+    TResult Function(String? message)? failure,
+    TResult Function(List<ArticleEntity>? articles)? loadSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -463,8 +463,8 @@ class _$_RemoteArticleLoading implements _RemoteArticleLoading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(String message) failure,
-    required TResult Function(List<ArticleEntity> articles) loadSuccess,
+    required TResult Function(String? message) failure,
+    required TResult Function(List<ArticleEntity>? articles) loadSuccess,
   }) {
     return loading();
   }
@@ -474,8 +474,8 @@ class _$_RemoteArticleLoading implements _RemoteArticleLoading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(String message)? failure,
-    TResult? Function(List<ArticleEntity> articles)? loadSuccess,
+    TResult? Function(String? message)? failure,
+    TResult? Function(List<ArticleEntity>? articles)? loadSuccess,
   }) {
     return loading?.call();
   }
@@ -485,8 +485,8 @@ class _$_RemoteArticleLoading implements _RemoteArticleLoading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(String message)? failure,
-    TResult Function(List<ArticleEntity> articles)? loadSuccess,
+    TResult Function(String? message)? failure,
+    TResult Function(List<ArticleEntity>? articles)? loadSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -543,7 +543,7 @@ abstract class _$$_RemoteArticleFailureCopyWith<$Res> {
           $Res Function(_$_RemoteArticleFailure) then) =
       __$$_RemoteArticleFailureCopyWithImpl<$Res>;
   @useResult
-  $Res call({String message});
+  $Res call({String? message});
 }
 
 /// @nodoc
@@ -557,13 +557,13 @@ class __$$_RemoteArticleFailureCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? message = null,
+    Object? message = freezed,
   }) {
     return _then(_$_RemoteArticleFailure(
-      null == message
+      freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -574,7 +574,7 @@ class _$_RemoteArticleFailure implements _RemoteArticleFailure {
   const _$_RemoteArticleFailure(this.message);
 
   @override
-  final String message;
+  final String? message;
 
   @override
   String toString() {
@@ -604,8 +604,8 @@ class _$_RemoteArticleFailure implements _RemoteArticleFailure {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(String message) failure,
-    required TResult Function(List<ArticleEntity> articles) loadSuccess,
+    required TResult Function(String? message) failure,
+    required TResult Function(List<ArticleEntity>? articles) loadSuccess,
   }) {
     return failure(message);
   }
@@ -615,8 +615,8 @@ class _$_RemoteArticleFailure implements _RemoteArticleFailure {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(String message)? failure,
-    TResult? Function(List<ArticleEntity> articles)? loadSuccess,
+    TResult? Function(String? message)? failure,
+    TResult? Function(List<ArticleEntity>? articles)? loadSuccess,
   }) {
     return failure?.call(message);
   }
@@ -626,8 +626,8 @@ class _$_RemoteArticleFailure implements _RemoteArticleFailure {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(String message)? failure,
-    TResult Function(List<ArticleEntity> articles)? loadSuccess,
+    TResult Function(String? message)? failure,
+    TResult Function(List<ArticleEntity>? articles)? loadSuccess,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -675,10 +675,10 @@ class _$_RemoteArticleFailure implements _RemoteArticleFailure {
 }
 
 abstract class _RemoteArticleFailure implements RemoteArticleState {
-  const factory _RemoteArticleFailure(final String message) =
+  const factory _RemoteArticleFailure(final String? message) =
       _$_RemoteArticleFailure;
 
-  String get message;
+  String? get message;
   @JsonKey(ignore: true)
   _$$_RemoteArticleFailureCopyWith<_$_RemoteArticleFailure> get copyWith =>
       throw _privateConstructorUsedError;
@@ -691,7 +691,7 @@ abstract class _$$_RemoteArticleLoadSuccessCopyWith<$Res> {
           $Res Function(_$_RemoteArticleLoadSuccess) then) =
       __$$_RemoteArticleLoadSuccessCopyWithImpl<$Res>;
   @useResult
-  $Res call({List<ArticleEntity> articles});
+  $Res call({List<ArticleEntity>? articles});
 }
 
 /// @nodoc
@@ -705,13 +705,13 @@ class __$$_RemoteArticleLoadSuccessCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? articles = null,
+    Object? articles = freezed,
   }) {
     return _then(_$_RemoteArticleLoadSuccess(
-      null == articles
+      freezed == articles
           ? _value._articles
           : articles // ignore: cast_nullable_to_non_nullable
-              as List<ArticleEntity>,
+              as List<ArticleEntity>?,
     ));
   }
 }
@@ -719,15 +719,17 @@ class __$$_RemoteArticleLoadSuccessCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_RemoteArticleLoadSuccess implements _RemoteArticleLoadSuccess {
-  const _$_RemoteArticleLoadSuccess(final List<ArticleEntity> articles)
+  const _$_RemoteArticleLoadSuccess(final List<ArticleEntity>? articles)
       : _articles = articles;
 
-  final List<ArticleEntity> _articles;
+  final List<ArticleEntity>? _articles;
   @override
-  List<ArticleEntity> get articles {
+  List<ArticleEntity>? get articles {
+    final value = _articles;
+    if (value == null) return null;
     if (_articles is EqualUnmodifiableListView) return _articles;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_articles);
+    return EqualUnmodifiableListView(value);
   }
 
   @override
@@ -759,8 +761,8 @@ class _$_RemoteArticleLoadSuccess implements _RemoteArticleLoadSuccess {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(String message) failure,
-    required TResult Function(List<ArticleEntity> articles) loadSuccess,
+    required TResult Function(String? message) failure,
+    required TResult Function(List<ArticleEntity>? articles) loadSuccess,
   }) {
     return loadSuccess(articles);
   }
@@ -770,8 +772,8 @@ class _$_RemoteArticleLoadSuccess implements _RemoteArticleLoadSuccess {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(String message)? failure,
-    TResult? Function(List<ArticleEntity> articles)? loadSuccess,
+    TResult? Function(String? message)? failure,
+    TResult? Function(List<ArticleEntity>? articles)? loadSuccess,
   }) {
     return loadSuccess?.call(articles);
   }
@@ -781,8 +783,8 @@ class _$_RemoteArticleLoadSuccess implements _RemoteArticleLoadSuccess {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(String message)? failure,
-    TResult Function(List<ArticleEntity> articles)? loadSuccess,
+    TResult Function(String? message)? failure,
+    TResult Function(List<ArticleEntity>? articles)? loadSuccess,
     required TResult orElse(),
   }) {
     if (loadSuccess != null) {
@@ -830,10 +832,10 @@ class _$_RemoteArticleLoadSuccess implements _RemoteArticleLoadSuccess {
 }
 
 abstract class _RemoteArticleLoadSuccess implements RemoteArticleState {
-  const factory _RemoteArticleLoadSuccess(final List<ArticleEntity> articles) =
+  const factory _RemoteArticleLoadSuccess(final List<ArticleEntity>? articles) =
       _$_RemoteArticleLoadSuccess;
 
-  List<ArticleEntity> get articles;
+  List<ArticleEntity>? get articles;
   @JsonKey(ignore: true)
   _$$_RemoteArticleLoadSuccessCopyWith<_$_RemoteArticleLoadSuccess>
       get copyWith => throw _privateConstructorUsedError;

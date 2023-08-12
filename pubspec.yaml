@@ -50,6 +50,11 @@ dependencies:
   # Freezed [https://pub.dev/packages/freezed]
   freezed: ^2.4.1
 
+  # Chopper
+  chopper: ^6.1.4
+
+
+
 dev_dependencies:
   flutter_lints: ^2.0.0
   flutter_test:
@@ -67,6 +72,8 @@ dev_dependencies:
   # Freezed Anotation [https://pub.dev/packages/freezed_annotation]
   freezed_annotation: ^2.4.1
 
+  # Chopper Generator
+  chopper_generator: ^6.0.3
 flutter:
   uses-material-design: true
   assets:
