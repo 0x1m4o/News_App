@@ -1,9 +1,13 @@
+import 'dart:convert';
+
+import 'package:floor/floor.dart';
 import 'package:news_app/core/constants/constants.dart';
 import 'package:news_app/features/news/domain/entities/article.dart';
 
+@Entity(tableName: 'articles', primaryKeys: ['id'])
 class ArticleModel extends ArticleEntity {
   const ArticleModel({
-    Source? source,
+    int? id,
     String? author,
     String? title,
     String? description,
@@ -12,7 +16,7 @@ class ArticleModel extends ArticleEntity {
     String? publishedAt,
     String? content,
   }) : super(
-          source: source,
+          id: id,
           author: author,
           title: title,
           description: description,
@@ -38,7 +42,7 @@ class ArticleModel extends ArticleEntity {
 
   factory ArticleModel.fromEntity(ArticleEntity entity) {
     return ArticleModel(
-        source: entity.source,
+        id: entity.id,
         author: entity.author,
         title: entity.title,
         description: entity.description,

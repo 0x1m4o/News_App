@@ -4,6 +4,9 @@ import 'package:news_app/features/news/presentation/pages/news_page.dart';
 import 'package:news_app/injection.dart';
 
 Future main() async {
+  // Ensure Initialized
+  WidgetsFlutterBinding.ensureInitialized();
+
   // Load the env
   await dotenv.load(fileName: ".env");
 
